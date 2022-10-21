@@ -20,6 +20,7 @@
 - kubectl get replicasets - List replicasets
 - kubectl describe pod podName - Describe a pod
 - kubectl delete replicasets - Delete a replicaset
+- kubectl get deployments - List deployments
 
 ## Good to Know
 ~/.kube/config - has all the credentials and certificates to access a cluster
