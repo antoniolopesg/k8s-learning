@@ -21,6 +21,7 @@
 - kubectl describe pod podName - Describe a pod
 - kubectl delete replicasets - Delete a replicaset
 - kubectl get deployments - List deployments
+- kubectl rollout history deployment deploymentName - List rollouts history of a deployment
 
 ## Good to Know
 ~/.kube/config - has all the credentials and certificates to access a cluster
