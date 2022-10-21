@@ -19,6 +19,7 @@
 - kubectl delete pod podName - Delete pod
 - kubectl get replicasets - List replicasets
 - kubectl describe pod podName - Describe a pod
+- kubectl delete replicasets - Delete a replicaset
 
 ## Good to Know
 ~/.kube/config - has all the credentials and certificates to access a cluster
