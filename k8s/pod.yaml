@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "server"
+  labels:
+    app: "server"
+spec:
+  containers:
+    - name: "server"
+      image: "antoniolopesg/hello-world:latest"
