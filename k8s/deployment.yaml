@@ -16,4 +16,4 @@ spec:
     spec:
       containers:
         - name: server
-          image: antoniolopesg/hello-world:v2
+          image: antoniolopesg/hello-world:v3
