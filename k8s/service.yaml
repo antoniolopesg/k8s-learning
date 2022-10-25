@@ -9,4 +9,5 @@ spec:
   ports:
     - name: server-service
       port: 80
+      targetPort: 8000
       protocol: TCP
