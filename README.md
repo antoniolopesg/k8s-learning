@@ -23,6 +23,7 @@
 - kubectl get deployments - List deployments
 - kubectl rollout history deployment deploymentName - List rollouts history of a deployment
 - kubectl rollout undo deployment - make the rollback to last revision
+- kubectl get services - List services
 
 ## Good to Know
 ~/.kube/config - has all the credentials and certificates to access a cluster
