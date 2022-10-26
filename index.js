@@ -1,7 +1,9 @@
 const http = require('http');
 
 function handle(_request, response) {
-  response.write('Hello World!!');
+  const name = process.env.NAME;
+  const age = process.env.AGE;
+  response.write(`Hello, I'm ${name}. I'm ${age}`);
   response.end();
 }
 
