@@ -16,4 +16,9 @@ spec:
     spec:
       containers:
         - name: server
-          image: antoniolopesg/hello-world:v3
+          image: antoniolopesg/hello-world:v4
+          env:
+            - name: NAME
+              value: "Antonio"
+            - name: AGE
+              value: "36"
