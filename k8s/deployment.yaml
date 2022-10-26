@@ -19,6 +19,12 @@ spec:
           image: antoniolopesg/hello-world:v4
           env:
             - name: NAME
-              value: "Antonio"
+              valueFrom:
+                configMapKeyRef:
+                  name: server-env
+                  key: NAME
             - name: AGE
-              value: "36"
+              valueFrom:
+                configMapKeyRef:
+                  name: server-env
+                  key: AGE
