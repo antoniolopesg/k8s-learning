@@ -24,6 +24,7 @@
 - kubectl rollout history deployment deploymentName - List rollouts history of a deployment
 - kubectl rollout undo deployment - make the rollback to last revision
 - kubectl get services - List services
+- kubectl proxy --port=portNumber - Proxy to access k8s api
 
 ## Good to Know
 ~/.kube/config - has all the credentials and certificates to access a cluster
