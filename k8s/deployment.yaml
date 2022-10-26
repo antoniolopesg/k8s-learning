@@ -17,14 +17,6 @@ spec:
       containers:
         - name: server
           image: antoniolopesg/hello-world:v4
-          env:
-            - name: NAME
-              valueFrom:
-                configMapKeyRef:
-                  name: server-env
-                  key: NAME
-            - name: AGE
-              valueFrom:
-                configMapKeyRef:
-                  name: server-env
-                  key: AGE
+          envFrom:
+            - configMapRef:
+                name: server-env
