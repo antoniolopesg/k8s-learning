@@ -1,10 +1,10 @@
 const http = require('http');
-const fs = require('fs/promises');
 
 async function handle(_request, response) {
   try {
-    const data = await fs.readFile('myfamily/family.txt')
-    response.write(`My family: ${data.toString('utf-8')}`);
+    const user = process.env.USER;
+    const password = process.env.PASSWORD;
+    response.write(`User: ${user} Password: ${password}`);
     response.end();
   } catch(err) {
     console.error(err);
