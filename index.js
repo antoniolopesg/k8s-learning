@@ -1,15 +1,21 @@
 const http = require('http');
+const { differenceInSeconds } = require('date-fns');
 
-async function handle(_request, response) {
-  try {
-    const user = process.env.USER;
-    const password = process.env.PASSWORD;
-    response.write(`User: ${user} Password: ${password}`);
-    response.end();
-  } catch(err) {
-    console.error(err);
-    process.exit(1);
+let startedAt = new Date();
+
+function handle(_request, response) {
+  const duration = differenceInSeconds(new Date(), startedAt);
+
+
+  if(duration > 25) {
+    response.writeHead(500)
+    response.write('Internal Server Error')
+  } else {
+    response.writeHead(200)
+    response.write(`Duration In Seconds: ${duration}`)
   }
+
+  response.end();
 }
 
 const server = http.createServer(handle);
