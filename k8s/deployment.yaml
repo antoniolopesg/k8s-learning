@@ -23,6 +23,7 @@ spec:
           volumeMounts:
             - mountPath: /myfamily
               name: config
+              readOnly: true
       volumes:
         - name: config
           configMap:
