@@ -16,7 +16,17 @@ spec:
     spec:
       containers:
         - name: server
-          image: antoniolopesg/hello-world:v4
+          image: antoniolopesg/hello-world:v5
           envFrom:
             - configMapRef:
                 name: server-env
+          volumeMounts:
+            - mountPath: /myfamily
+              name: config
+      volumes:
+        - name: config
+          configMap:
+            name: configmap-family
+            items:
+              - key: members
+                path: "family.txt"
