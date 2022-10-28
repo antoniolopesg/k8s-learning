@@ -7,7 +7,7 @@ function handle(_request, response) {
   const duration = differenceInSeconds(new Date(), startedAt);
 
 
-  if(duration > 25) {
+  if(duration < 10) {
     response.writeHead(500)
     response.write('Internal Server Error')
   } else {

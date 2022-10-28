@@ -16,12 +16,21 @@ spec:
     spec:
       containers:
         - name: server
-          image: antoniolopesg/hello-world:v5.2
-          livenessProbe:
+          image: antoniolopesg/hello-world:v5.3
+          # livenessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: 8000
+          #   periodSeconds: 15
+          #   failureThreshold: 1
+          #   timeoutSeconds: 1
+          #   successThreshold: 1
+          readinessProbe:
             httpGet:
               path: /
               port: 8000
-            periodSeconds: 15
+            periodSeconds: 1
+            initialDelaySeconds: 60
             failureThreshold: 1
             timeoutSeconds: 1
             successThreshold: 1
