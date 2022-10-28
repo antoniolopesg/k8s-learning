@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: server
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -17,23 +17,22 @@ spec:
       containers:
         - name: server
           image: antoniolopesg/hello-world:v5.3
-          # livenessProbe:
-          #   httpGet:
-          #     path: /
-          #     port: 8000
-          #   periodSeconds: 15
-          #   failureThreshold: 1
-          #   timeoutSeconds: 1
-          #   successThreshold: 1
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8000
+            periodSeconds: 5
+            failureThreshold: 1
+            timeoutSeconds: 1
+            successThreshold: 1
+            initialDelaySeconds: 15
           readinessProbe:
             httpGet:
               path: /
               port: 8000
-            periodSeconds: 1
-            initialDelaySeconds: 60
+            periodSeconds: 3
             failureThreshold: 1
-            timeoutSeconds: 1
-            successThreshold: 1
+            initialDelaySeconds: 15
           envFrom:
             - configMapRef:
                 name: server-env
