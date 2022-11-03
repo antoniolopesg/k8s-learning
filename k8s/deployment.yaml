@@ -17,6 +17,13 @@ spec:
       containers:
         - name: server
           image: antoniolopesg/hello-world:v5.3
+          resources:
+            requests:
+              cpu: 100m
+              memory: 20Mi
+            limits:
+              cpu: 500m
+              memory: 25Mi
           livenessProbe:
             httpGet:
               path: /
