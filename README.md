@@ -26,6 +26,7 @@
 - kubectl get services - List services
 - kubectl proxy --port=portNumber - Proxy to access k8s api
 - kubectl top pod podName
+- kubectl get hpa - List hpas
 
 ## Good to Know
 ~/.kube/config - has all the credentials and certificates to access a cluster
