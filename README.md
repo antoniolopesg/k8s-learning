@@ -27,6 +27,7 @@
 - kubectl proxy --port=portNumber - Proxy to access k8s api
 - kubectl top pod podName
 - kubectl get hpa - List hpas
+- kubectl get ns - List namespaces
 
 ## Good to Know
 ~/.kube/config - has all the credentials and certificates to access a cluster
