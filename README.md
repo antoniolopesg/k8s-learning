@@ -30,6 +30,7 @@
 - kubectl get ns - List namespaces
 - kubectl create ns namespaceName - Create a namespace
 - kubectl config current-context - See the current context
+- kubectl config set-context contextName --namespace=namespaceName --cluster=clusterName --user=userName
 
 ## Good to Know
 ~/.kube/config - has all the credentials and certificates to access a cluster
