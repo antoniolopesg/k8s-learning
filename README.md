@@ -29,6 +29,7 @@
 - kubectl get hpa - List hpas
 - kubectl get ns - List namespaces
 - kubectl create ns namespaceName - Create a namespace
+- kubectl config current-context - See the current context
 
 ## Good to Know
 ~/.kube/config - has all the credentials and certificates to access a cluster
