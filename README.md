@@ -28,6 +28,7 @@
 - kubectl top pod podName
 - kubectl get hpa - List hpas
 - kubectl get ns - List namespaces
+- kubectl create ns namespaceName - Create a namespace
 
 ## Good to Know
 ~/.kube/config - has all the credentials and certificates to access a cluster
